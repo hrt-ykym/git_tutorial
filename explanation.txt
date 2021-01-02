@@ -7,5 +7,7 @@ git commit -m "メッセージ" :　メッセージ付きコミット
 git commit -v : 変更内容を確認できる
 git status : 変更されたファイルを確認できる
 
+git diff ファイル名
+git diff --staged : git addした後の差分を表示
 
 ls -a : ディレクトリ内のすべてのものを表示
