@@ -37,4 +37,8 @@ stageした変更をもとに戻す
 git reset HEAD ファイル名 : stageした変更をもとに戻す
 git reset HEAD . : stageした変更をすべてもとに戻す
 
+直前のコミットをやり直す
+git commit --amend : 直前のコミットを修正できる.(pushしたコミットをやり直したらだめ)
+
+
 ls -a : ディレクトリ内のすべてのものを表示
