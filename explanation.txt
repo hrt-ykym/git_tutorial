@@ -40,5 +40,8 @@ git reset HEAD . : stageした変更をすべてもとに戻す
 直前のコミットをやり直す
 git commit --amend : 直前のコミットを修正できる.(pushしたコミットをやり直したらだめ)
 
+リモートから情報を取得する
+git fetch リモート名(origin) : リモート(github上で追加されたファイルを取得する)
+git branch -a : git branchのすべての情報を表示する
 
 ls -a : ディレクトリ内のすべてのものを表示
