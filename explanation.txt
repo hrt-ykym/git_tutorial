@@ -54,6 +54,11 @@ git pull origin master : fetchとmergeを一度に行うことができる.
 git remote rename (旧リモート名) (新リモート名) : リモート名の変更
 git remote rm リモート名 : リモートの消去
 
+branchとmerge
+git branch : branchを表示(今いるbranchは*マークが付く)
+git branch ブランチ名 :　新規ブランチの作成
+git checkout ブランチ名 : ブランチの切り替え
+git checkout -b 新規ブランチ名 : 上２つの作業を一度に行いたい場合
 
 
 ls -a : ディレクトリ内のすべてのものを表示
