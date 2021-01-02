@@ -10,4 +10,23 @@ git status : 変更されたファイルを確認できる
 git diff ファイル名
 git diff --staged : git addした後の差分を表示
 
+git log : 変更履歴を確認できる
+git log --oneline : 一行で変更内容を確認できる
+git log -n コミット数 :表示する履歴コミット数を指定できる.
+
+git rm ファイル名 : ファイルの消去
+git em --cached ファイル名 : gitのワークツリーから消去したいがファイルは残したい場合
+
+git mv 旧ファイル 新ファイル : ファイルの移動ができる.
+
+git remote add origin URL : originというショートカットでurlのリモートリポジトリを登録する
+git push origin master : ローカルリポジトリの内容をリモートリポジトリにpush
+git push -u origin master : 次回以降,git pushのみでpushできる.
+
+コマンドにエイリアスをつける.
+git config --global alias.ci commit : commitするときにciと入力すれば済む
+git config --global alias.st status : statusのときstと入力すれば済む
+git config --global alias.br brunch : brunchのときbrと入力すれば済む
+git config --global alias.co checkout : checkoutのときcoと入力すれば済む
+
 ls -a : ディレクトリ内のすべてのものを表示
