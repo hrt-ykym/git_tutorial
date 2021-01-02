@@ -29,4 +29,8 @@ git config --global alias.st status : statusのときstと入力すれば済む
 git config --global alias.br brunch : brunchのときbrと入力すれば済む
 git config --global alias.co checkout : checkoutのときcoと入力すれば済む
 
+変更をもとに戻す
+git checkout -- ファイル名 : ファイルへの変更を取り消す
+git checkout -- . : 全変更の取り消し
+
 ls -a : ディレクトリ内のすべてのものを表示
