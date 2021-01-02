@@ -41,11 +41,19 @@ git reset HEAD . : stageした変更をすべてもとに戻す
 git commit --amend : 直前のコミットを修正できる.(pushしたコミットをやり直したらだめ)
 
 リモートから情報を取得する
-git fetch リモート名(origin) : リモート(github上で追加されたファイルを取得する)
+git fetch origin : リモート(github上で追加されたファイルを取得する)
 git branch -a : git branchのすべての情報を表示する
 git checkout ブランチ名 :　ブランチに移動する.(ブランチ名はgit branchコマンドで探す)
 git checkout master : マスターブランチに戻る
-git merge origin/master : マスターブランチに取得した応報をmergeする
+git merge origin/master : マスターブランチに取得した情報をmergeする
+
+リモートから情報を取得する(pull)fetchのmasterとmergeする作業を一度にできる
+git pull origin master : fetchとmergeを一度に行うことができる.
+
+リモート名の変更,消去
+git remote rename (旧リモート名) (新リモート名) : リモート名の変更
+git remote rm リモート名 : リモートの消去
+
 
 
 ls -a : ディレクトリ内のすべてのものを表示
