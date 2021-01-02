@@ -63,5 +63,6 @@ git checkout -b 新規ブランチ名 : 上２つの作業を一度に行いた�
 git merge ブランチ名 : ブランチの内容を取り込む
 git merge origin/ブランチ : github上のブランチを取り込む
 
+mergeを追記してみた
 
 ls -a : ディレクトリ内のすべてのものを表示
