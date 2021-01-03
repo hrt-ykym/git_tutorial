@@ -78,5 +78,8 @@ git rebase ブランチ名 : 別ブランチのcommitをブランチに取り込
 履歴を整えられる)
 
 git config --global merge.ff false(true) : falseにすればmergeするときもcommitメッセージを残すことができる.
+なお、gitubにプッシュしたコミットをリベースしてしまうのはだめ。
+
+作業の履歴を残したければmerge、履歴を消してきれいにしたければrebase
 
 ls -a : ディレクトリ内のすべてのものを表示
