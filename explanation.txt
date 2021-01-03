@@ -68,5 +68,6 @@ git branch -d ブランチ名 : branchの消去ができる(masterにmergeされ
 git branch -D ブランチ名 : branchの強制消去ができる
 
 プルリクエストについて
+pull request
 
 ls -a : ディレクトリ内のすべてのものを表示
