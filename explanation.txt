@@ -74,5 +74,7 @@ git branch -D ブランチ名 : branchの強制消去ができる
 プルリクエストについて
 pull request
 
+git rebase ブランチ名 : 別ブランチのcommitをブランチに取り込むことができる.(mergeをしながらcommitまでも取り込むことができる.
+履歴を整えられる)
 
 ls -a : ディレクトリ内のすべてのものを表示
