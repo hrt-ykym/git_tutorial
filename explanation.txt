@@ -63,5 +63,8 @@ git checkout -b 新規ブランチ名 : 上２つの作業を一度に行いた�
 git merge ブランチ名 : ブランチの内容を取り込む
 git merge origin/ブランチ : github上のブランチを取り込む
 
+git branch -m ブランチ名 : 今いるbranchの名前を変更するとき
+git branch -d ブランチ名 : branchの消去ができる(masterにmergeされていない場合は止まってくれる)
+git branch -D ブランチ名 : branchの強制消去ができる
 
 ls -a : ディレクトリ内のすべてのものを表示
