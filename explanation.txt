@@ -77,4 +77,6 @@ pull request
 git rebase ブランチ名 : 別ブランチのcommitをブランチに取り込むことができる.(mergeをしながらcommitまでも取り込むことができる.
 履歴を整えられる)
 
+git config --global merge.ff false(true) : falseにすればmergeするときもcommitメッセージを残すことができる.
+
 ls -a : ディレクトリ内のすべてのものを表示
