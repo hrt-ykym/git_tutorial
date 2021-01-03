@@ -82,4 +82,6 @@ git config --global merge.ff false(true) : falseにすればmergeするときも
 
 作業の履歴を残したければmerge、履歴を消してきれいにしたければrebase
 
+
+
 ls -a : ディレクトリ内のすべてのものを表示
