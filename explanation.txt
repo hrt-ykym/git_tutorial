@@ -62,6 +62,8 @@ git branch ブランチ名 :　新規ブランチの作成
 git checkout ブランチ名 : ブランチの切り替え
 git checkout -b 新規ブランチ名 : 上２つの作業を一度に行いたい場合
 
+git branch master origin/master : github上のmasterをローカルのmasterとして作成
+
 git merge ブランチ名 : ブランチの内容を取り込む
 git merge origin/ブランチ : github上のブランチを取り込む
 
