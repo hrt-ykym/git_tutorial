@@ -74,4 +74,8 @@ git branch -D ブランチ名 : branchの強制消去ができる
 プルリクエストについて
 pull request
 
+rebaseのための落書きをするよ
+aaaaaaa
+
+
 ls -a : ディレクトリ内のすべてのものを表示
