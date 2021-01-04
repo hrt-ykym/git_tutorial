@@ -82,6 +82,13 @@ git config --global merge.ff false(true) : falseにすればmergeするときも
 
 作業の履歴を残したければmerge、履歴を消してきれいにしたければrebase
 
+コミットに対してタグを作成する
+git tag -a タグ名 -m "メッセージ"
+git tag タグ名 : メッセージなしでタグを付ける
+git tag タグ名 コミット名 : 後からコミットに対してタグ付けできる
+git show タグ名 : タグの情報を表示する.
 
+git push origin タグ名 : タグをリモートに送信する
+git push origin --tags : すべてのタグをリモートに送信する
 
 ls -a : ディレクトリ内のすべてのものを表示
