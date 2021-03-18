@@ -103,4 +103,4 @@ git show タグ名 : タグの情報を表示する.
 git push origin タグ名 : タグをリモートに送信する
 git push origin --tags : すべてのタグをリモートに送信する
 
-git rm --cached [ファイル名] : ファイルを残したまま、gitの管理から外す(キャッシュの消去)
+git rm -r --cached [ファイル名] : ファイルを残したまま、gitの管理から外す(キャッシュの消去)
