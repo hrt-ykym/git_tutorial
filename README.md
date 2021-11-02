@@ -17,8 +17,8 @@
 - `git commit --amend` : 直前のコミットを修正できる.(pushしたコミットをやり直したらだめ)
 
 # リモートにコミットした内容をpush
-- `git push origin master` : ローカルリポジトリの内容をリモートリポジトリにpush
-- `git push -u origin master` : 次回以降,git pushのみでpushできる.
+- `git push origin main` : ローカルリポジトリの内容をリモートリポジトリにpush
+- `git push -u origin main` : 次回以降,git pushのみでpushできる.
 
 
 
@@ -27,11 +27,11 @@
 - `git branch <ブランチ名>` :　新規ブランチの作成
 - `git checkout <ブランチ名>` : ブランチの切り替え
 - `git checkout -b <新規ブランチ名>` : 上２つの作業を一度に行いたい場合
-- `git branch master origin/master` : github上のmasterをローカルのmasterとして作成
+- `git branch main origin/main` : github上のmainをローカルのmainとして作成
 - `git merge <ブランチ名>` : ブランチの内容を取り込む
 - `git merge origin/<ブランチ>` : github上のブランチを取り込む
 - `git branch -m <ブランチ名>` : 今いるbranchの名前を変更するとき
-- `git branch -d <ブランチ名>` : branchの消去ができる(masterにmergeされていない場合は止まってくれる)
+- `git branch -d <ブランチ名>` : branchの消去ができる(mainにmergeされていない場合は止まってくれる)
 - `git branch -D <ブランチ名>` : branchの強制消去ができる
 
 - `git rebase <ブランチ名>` : 別ブランチのcommitをブランチに取り込むことができる.(mergeをしながらcommitまでも取り込むことができる.
@@ -68,14 +68,14 @@
 
 ## リモートから情報を取得する
 - `git fetch origin` : リモート(github上で追加されたファイルを取得する)
-- `git checkout master` : マスターブランチに戻る
-- `git merge origin/master` : マスターブランチに取得した情報をmergeする
+- `git checkout main` : マスターブランチに戻る
+- `git merge origin/main` : マスターブランチに取得した情報をmergeする
 - `git branch -a` : git branchのすべての情報を表示する
 - `git checkout <ブランチ名>` :　ブランチに移動する.(ブランチ名はgit branchコマンドで探す)
-origin/masterとすればgithub上のmasterブランチをmerge,fetchできる。
+origin/mainとすればgithub上のmainブランチをmerge,fetchできる。
 
-## リモートから情報を取得する(pull)fetchのmasterとmergeする作業を一度にできる
-- `git pull origin master` : fetchとmergeを一度に行うことができる.
+## リモートから情報を取得する(pull)fetchのmainとmergeする作業を一度にできる
+- `git pull origin main` : fetchとmergeを一度に行うことができる.
 
 ## リモート名の変更,消去
 - `git remote rename <旧リモート名> <新リモート名>` : リモート名の変更
