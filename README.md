@@ -39,6 +39,10 @@
 - `git config --global merge.ff false(true)` : falseにすればmergeするときもcommitメッセージを残すことができる.
 なお、githubにプッシュしたコミットをリベースしてしまうのはだめ。
 
+- `git reflog` : 今のブランチのすべてのコミット履歴を表示する.
+
+- `git reset --hard HEAD@{数字}` : 元に戻したいポイントの数字を入力すれば元に戻る.
+
 **作業の履歴を残したければmerge、履歴を消してきれいにしたければrebase**
 
 # その他もろもろ
