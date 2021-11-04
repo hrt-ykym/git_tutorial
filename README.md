@@ -94,4 +94,4 @@ origin/mainとすればgithub上のmainブランチをmerge,fetchできる。
 - `git push origin --tags` : すべてのタグをリモートに送信する
 
 ## キャッシュについて(.gitignoreファイル作成時に便利)
-- `git rm -r --cached <ファイル名>` : ファイルを残したまま、gitの管理から外す(キャッシュの消去)
+- `git rm -r --cached <ファイル名>` : ファイルを残したまま、gitの管理から外す(キャッシュの消去). 既にcommitしてしまったファイルをあとからignoreしたい場合に使うと改めてignoreできる.
