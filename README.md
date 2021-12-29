@@ -72,7 +72,7 @@ Create repositoryをクリックし, HTTPによる通信になっていること
 
 先ほどの例で`git reset`コマンドを使って前のコミットに戻したが, 「実はその`git reset`は間違いだった」というときのコマンドも用意されている.
 - `git reflog`: mergeやresetなどすべての情報を含む履歴を確認できる.
-- `git reset --soft HEAD@{番号}`: 番号の地点へ戻れる.
+- `git reset --hard HEAD@{番号}`: 番号の地点へ戻れる.
 
 ## README.mdページについて
 GitHubにおいてPublicでオープンソースにする際には`README.md`というMarkdown形式のファイルを作成しておくとよい. そうするとそのリポジトリを開いたときに何が記載されているのかが読者にとって(自分にとっても)理解しやすくなる. GitHubはREADME.mdページをpushされると, 自動的にトップページとしてリポジトリに表示してくれる. (この記事みたいに.)
