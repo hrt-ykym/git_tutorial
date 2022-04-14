@@ -216,6 +216,7 @@ GitHub Flowは簡単にまとめると以下の手順で行われる.
 6. 先の操作でmaterが変更され, 自身のローカルに取り込むために, 分けた作業用ブランチからmasterブランチに移動し,　pullをする.
 
 `git checkout master`
+
 `git pull origin master`
 
 ![](images/2022-04-14-22-50-52.png)
