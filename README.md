@@ -158,3 +158,72 @@ origin/masterとすればgithub上のmasterブランチをmerge,fetchできる�
 
 ## キャッシュについて(.gitignoreファイル作成時に便利)
 - `git rm -r --cached <ファイル名>` : ファイルを残したまま、gitの管理から外す(キャッシュの消去). 既にcommitしてしまったファイルをあとからignoreしたい場合に使うと改めてignoreできる.
+
+## GitHub Flowについて
+GitHubでチーム開発をする際にはGitHub FlowというGitHub社が用いている共同開発フローを用いることが多い. その手順を以下に雑に書いておく.
+
+### GitHub Flow
+GitHub Flowは簡単にまとめると以下の手順で行われる.
+
+1. 参加するプロジェクト(リポジトリ)を自身のローカルリポジトリにクローンする.
+   
+   `git clone <url>`
+
+![](images/2022-04-14-22-09-32.png)
+
+![](images/2022-04-14-22-10-16.png)
+
+2. すると自動的にブランチにmasterブランチが形成されるが, masterブランチは常にデプロイできる状態にしておく必要があり, 未完成のコードをpushすべきではない. したがって, ブランチを分け, この上で共同作成者は作業をする.
+
+`git checkout -b <hoge>`
+
+![](images/2022-04-14-22-13-00.png)
+
+3. 自身の上でpushしたいコードが出来上がったら(進捗の確認がし易いように定期的にpushはすべき), stage -> commit -> pushの一連の作業をする. このとき, pushするブランチの名前はmasterではなく現在使用しているbranch名を用いること.
+
+`git add .`
+
+`git commit -m "hogeを追加"`
+
+`git push origin <ブランチ名>`
+
+![](images/2022-04-14-22-19-25.png)
+
+4. GitHub上で共同作成者にPull requestを送る. GitHubを開き, リモートで作業をしているリポジトリを開き, Pull requestsタブを開く. 
+   
+   ![](images/2022-04-14-22-20-51.png)
+
+その後, New pull requestボタンを押し,　baseをmasterのまま, compareを先程pushしたブランチ名に選択する.
+
+![](images/2022-04-14-22-23-38.png)
+
+すると下図のようになるので, Create pull requestボタンを押す.(コードの部分にコメントを残すことも可能.)
+
+![](images/2022-04-14-22-25-12.png)
+
+下記画面に移行するので, 説明や相手へのメッセージを記入し, Create pull requestをする.
+
+![](images/2022-04-14-22-26-03.png)
+
+以上でpull requestは完了だが, 指定の共同作成社にレビューをお願いする場合(メール通知を飛ばす場合)Reviewersタブからユーザーを追加する.
+
+![](images/2022-04-14-22-29-03.png)
+
+5. Pull requestのmasterブランチへの取り込み. プロジェクトの所有者は先ほどのpull requestページにてFiles changedを確認し, 問題なければMerge pull requestボタンを押す. 問題があればFile changedにおいてコメントを作成者にむけて飛ばす. なお, merge後にはpull requestされたブランチを消去しておくとよい.
+
+![](images/2022-04-14-22-48-11.png)
+
+6. 先の操作でmaterが変更され, 自身のローカルに取り込むために, 分けた作業用ブランチからmasterブランチに移動し,　pullをする.
+
+`git checkout master`
+`git pull origin master`
+
+![](images/2022-04-14-22-50-52.png)
+
+7. 最後に不要となったローカルのブランチを消去する.
+
+`git branch -D <hoge>`
+
+![](images/2022-04-14-22-51-50.png)
+
+8. その後さらに開発を進める際には改めて1.から始める. (とにかくmasterブランチは常にデプロイ可能な状況にしておくことが大切らしい.)
